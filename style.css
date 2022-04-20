@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Website Theme*/
-:root{
+:root {
     --hue-1: 257;
     --hue-2: 47;
     --bg-color: hsl(var(--hue-1), 100%, 97%);
@@ -19,7 +19,7 @@
 
 *,
 *::before,
-*::after{
+*::after {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -27,7 +27,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background: linear-gradient(#6d33ff, #fff);
     background-repeat: no-repeat;
     font-family: "Poppins", sans-serif;
@@ -35,52 +35,55 @@ body{
 }
 
 /* GRID */
-body{
+body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
 }
 
-header{
+header {
     grid-area: 1 / 1 / 2 / 5;
 }
 
-main{
+main {
     grid-area: 2 / 1 / 4 / 5;
+    min-height: 100vh;
 }
 
-footer{
+footer {
     grid-area: 4 / 1 / 5 / 5;
 }
 
 /* Navbar Styling */
-.navbar{
+.navbar {
     background-color: white;
     width: 100%;
-    justify-content: center;
+
 }
+
 /* ===== LOGO ===== */
 
-.logo{
+.logo {
     display: flex;
+    justify-content: center;
     font-family: "Abril Fatface", cursive;
     font-size: 2rem;
     color: var(--heading-color);
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
 }
-.logo span{
+
+.logo span {
     color: var(--main-color-1);
 }
 
 /* ===== LIKS ===== */
-.links ul{
+.links ul {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-.nav-link{
+.nav-link {
     position: relative;
-    display: inline-block;
     margin: 15px;
     text-transform: uppercase;
     font-size: 0.70rem;
@@ -91,7 +94,7 @@ footer{
     transition: 0.3s;
 }
 
-.nav-link::after{
+.nav-link::after {
     content: "";
     position: absolute;
     width: 0;
@@ -105,20 +108,11 @@ footer{
     transition: .3s;
 }
 
-.active{
+.active {
     position: relative;
-    display: inline-block;
-    margin: 15px;
-    text-transform: uppercase;
-    font-size: 0.70rem;
-    letter-spacing: 0.5px;
-    color: var(--text-color);
-    font-weight: 500;
-    opacity: 0.9;
-    transition: 0.3s;
 }
 
-.active::before{
+.active::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -131,11 +125,11 @@ footer{
     opacity: 0.3;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--heading-color);
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after {
     width: 100%;
     opacity: 0.2;
 }
@@ -143,7 +137,7 @@ footer{
 
 
 /* Showcase Area Styling */
-.sub-heading{
+.sub-heading {
     color: #fff;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -153,45 +147,50 @@ footer{
     margin-bottom: .50rem;
     font-weight: 500;
 }
-.text{
+
+.text {
     color: #fff;
     margin-left: 0;
     font-size: 0.9rem;
 }
-.showcase-area{
+
+.showcase-area {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-.showcase-area .container{
-    display: grid;
-    grid-template-columns: 1fr 550px;
+.showcase-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     height: calc(100vh - 120px);
     max-height: 600px;
-    align-items: center;
     padding-left: 15px;
 }
 
-.showcase-area .heading{
-    font-size: 3.5rem;
+.heading {
+    font-size: 2rem;
 }
 
-.showcase-area .text{
+.text {
     font-size: 1rem;
 }
 
-.showcase-info span{
+.showcase-info span {
     color: var(--main-color-1);
 }
 
-.cta{
+.cta {
     margin-top: 15px;
     display: flex;
     align-items: center;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 0.9rem 1.75rem;
     border-radius: 17px;
@@ -203,13 +202,47 @@ footer{
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--heading-color);
 }
 
-.btn.secondary-btn{
-    margin-top: 5px;
+
+/* About Section Styling */
+.showcase-info-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading__about {
+    font-size: 2rem
+}
+
+.text__about {
+    max-width: 700px;
+    color: white;
+    font-size: .95rem;
+    text-align: center;
+}
+
+.text__about .about__span {
+    color: black;
+}
+
+.showcase-info-about {
+    margin: 50px;
+}
+
+.showcase-info-about span {
+    color: var(--main-color-1);
+}
+
+.btn.secondary-btn {
+    margin: 5px auto;
     position: relative;
+    display: block;
+    margin: auto;
+    width: fit-content;
     background: transparent;
     color: var(--main-color-1);
     font-weight: 500;
@@ -220,7 +253,7 @@ footer{
     padding: 0.15rem 0;
 }
 
-.btn.secondary-btn::before{
+.btn.secondary-btn::before {
     content: "";
     position: absolute;
     width: 0%;
@@ -231,40 +264,42 @@ footer{
     transition: 0.3s ease-in-out;
 }
 
-.btn.secondary-btn:hover::before{
+.image__about {
+    width: 150px;
+    height: 150px;
+    margin: 5px 0;
+}
+
+.person {
+    width: 100%;
+    height: 100%;
+}
+
+.btn.secondary-btn:hover::before {
     width: 100%;
 }
 
-/* About Section Styling */
-
-.showcase-info-about{
-    margin:  50px;
-}
-
-.showcase-info-about span{
-    color: var(--main-color-1);
-}
-
 /* Services Section Styling */
-.heading.services-h1{
+.heading.services-h1 {
     text-align: center;
     margin-bottom: 15px;
 }
-.services{
+
+.services {
     color: var(--text-color);
     margin: 50px;
     align-items: center;
     justify-content: center;
 }
 
-.services .serv-content{
+.services .serv-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
 
-.services .serv-content .card{
+.services .serv-content .card {
     margin-bottom: 15px;
     width: calc(50% - 50px);
     background: white;
@@ -275,34 +310,34 @@ footer{
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover{
+.services .serv-content .card:hover {
     background: var(--main-color-dark-1);
     color: #fff;
 }
 
-.services .serv-content .card i{
+.services .serv-content .card i {
     font-size: 50px;
     color: var(--main-color-1);
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover i{
+.services .serv-content .card:hover i {
     color: #fff;
 }
 
-.services .serv-content .card .text{
+.services .serv-content .card .text {
     color: var(--main-color-1);
     font-weight: 500;
     margin: 10px 0 7px 0;
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover .text{
+.services .serv-content .card:hover .text {
     color: #fff;
 }
 
 /* Skills Section Styling */
-.skills .skills-content{
+.skills .skills-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -310,21 +345,21 @@ footer{
     margin: 150px;
 }
 
-.skills .skills-content .column{
+.skills .skills-content .column {
     width: calc(50% - 30px);
 }
 
-.skills .skills-content .left .text{
+.skills .skills-content .left .text {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-.skills .skills-content .left p{
+.skills .skills-content .left p {
     text-align: justify;
 }
 
-.skills .skills-content .left a{
+.skills .skills-content .left a {
     display: inline-block;
     background: var(--main-color-1);
     color: #fff;
@@ -334,38 +369,38 @@ footer{
     margin-top: 20px;
     border-radius: 6px;
     border: solid 2px var(--main-color-1);
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-.skills .skills-content .left a:hover{
+.skills .skills-content .left a:hover {
     color: var(--main-color-1);
     background: none;
 }
 
-.skills .skills-content .right .bars{
+.skills .skills-content .right .bars {
     margin-bottom: 15px;
 }
 
-.skills .skills-content .right .infor{
+.skills .skills-content .right .infor {
     display: flex;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
 }
 
-.skills .skills-content .right span{
+.skills .skills-content .right span {
     font-weight: 500;
     font-size: 18px;
 }
 
-.skills .skills-content .right .line{
+.skills .skills-content .right .line {
     height: 5px;
     width: 100%;
     background: #fff;
     position: relative;
 }
 
-.skills .skills-content .right .line::before{
+.skills .skills-content .right .line::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -374,46 +409,49 @@ footer{
     background: var(--main-color-1);
 }
 
-.skills-content .right .html::before{
+.skills-content .right .html::before {
     width: 90%;
 }
 
-.skills-content .right .css::before{
+.skills-content .right .css::before {
     width: 60%;
 }
 
-.skills-content .right .js::before{
+.skills-content .right .js::before {
     width: 40%;
 }
 
-.skills-content .right .php::before{
+.skills-content .right .php::before {
     width: 10%;
 }
-.skills-content .right .py::before{
+
+.skills-content .right .py::before {
     width: 20%;
 }
 
 /* Contact Section Stying */
-.contact{
+.contact {
     margin: 50px;
 }
 
-.contact .container{
+.contact .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
 }
-.contact-info{
+
+.contact-info {
     align-content: center;
     text-align: center;
 }
-.mail{
+
+.mail {
     color: var(--main-color-1);
     font-weight: 500;
     font-size: 1.1rem;
 }
 
-.mail i{
+.mail i {
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 2px;
@@ -421,15 +459,15 @@ footer{
     transition: 0.3s margin-left;
 }
 
-.mail:hover{
+.mail:hover {
     color: var(--main-color-dark-1);
 }
 
-.mail:hover i{
+.mail:hover i {
     margin-left: 10px;
 }
 
-.contact-form{
+.contact-form {
     background-color: var(--bg-color-2);
     border-radius: 20px;
     padding: 3.5rem 3rem;
@@ -438,14 +476,15 @@ footer{
     margin-bottom: 15px;
 }
 
-.contact-form h3{
+.contact-form h3 {
     color: var(--heading-color);
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 1.6rem;
     line-height: 0.9;
 }
-.sub-heading-contact{
+
+.sub-heading-contact {
     color: #fff;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -454,7 +493,8 @@ footer{
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.sub-heading-contact span{
+
+.sub-heading-contact span {
     color: var(--main-color-2);
     font-size: 1rem;
     text-transform: uppercase;
@@ -463,7 +503,8 @@ footer{
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.form-input{
+
+.form-input {
     display: inline-block;
     padding: 0.9rem 1.5rem;
     background: var(--bg-color-3);
@@ -477,11 +518,11 @@ footer{
     transition: 0.3s;
 }
 
-.form-input::placeholder{
+.form-input::placeholder {
     color: var(--text-color);
 }
 
-.form-input:hover{
+.form-input:hover {
     filter: brightness(97%);
 }
 
@@ -491,15 +532,16 @@ footer{
     border-color: var(--main-color-1);
 }
 
-textarea.form-input{
+textarea.form-input {
     resize: none;
     min-height: 170px;
 }
 
-.contact-form .form-input{
+.contact-form .form-input {
     margin-bottom: 1.5rem;
 }
-.maps{
+
+.maps {
     margin-top: 15px;
     align-items: center;
 }
@@ -507,46 +549,107 @@ textarea.form-input{
 
 /* footer section styling */
 
-footer{
+footer {
     color: var(--text-color);
-    background-color: red;
+    background-color: white;
     text-align: center;
-    height: 50px;
+    height: 55px;
     margin: 0;
 }
-.footer__data{
+
+.footer__data {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.text__footer span a{
+.text__footer span a {
     color: var(--main-color-1);
 }
 
-footer .text__footer span a:hover{
+footer .text__footer span a:hover {
     text-decoration: underline;
 }
 
-.footer__links{
+.footer__links {
     padding: 15px 5px;
     transition: 0.3s;
 }
 
-.fa-github{
+.fa-github {
     padding-right: 5px;
 }
-.footer__links i{
+
+.footer__links i {
     color: var(--main-color-1);
     font-size: 20px;
     transition: 0.3s;
 }
 
-.footer__links i:hover{
+.footer__links i:hover {
     color: var(--heading-color);
 }
 
-.text__footer{
+.text__footer {
     color: black;
+}
+
+@media screen and (min-height: 720px) {
+    main {
+        min-height: 87vh;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .showcase-info {
+        margin-left: 50px;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .footer__data {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading__about {
+        font-size: 3rem
+    }
+
+    .image__about {
+        width: 200px;
+        height: 200px;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .showcase-info-about {}
+
+    .text__about,
+    .heading__about,
+    .secondary-btn {}
+
+    .text__about {}
+
+    .image__about {
+        width: 300px;
+        height: 300px;
+        margin: 15px 0;
+    }
+
 }
