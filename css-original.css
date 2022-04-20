@@ -22,23 +22,23 @@
 *::after{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 body{
     background: linear-gradient(#6d33ff, #fff);
-    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: var(--bg-color);
     font-family: "Poppins", sans-serif;
-
 }
 
 /* GRID */
 body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
+    grid-template-rows: .50 repeat(2, 1fr) 0.50fr;
 }
 
 header{
@@ -54,28 +54,47 @@ footer{
 }
 
 /* Navbar Styling */
+
+
+
 .navbar{
-    background-color: white;
-    width: 100%;
-    justify-content: center;
+    color: var(--heading-color);
+    font-size: 3rem;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    line-height: 1.3;
+    background-color: var(--bg-color-2);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
-/* ===== LOGO ===== */
 
 .logo{
-    display: flex;
+    margin-left: 120px;
+    margin-right: 1.5rem;
     font-family: "Abril Fatface", cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--heading-color);
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
 }
 .logo span{
     color: var(--main-color-1);
 }
 
-/* ===== LIKS ===== */
+.navbar .logo{
+    height: 120px;
+    line-height: 120px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
 .links ul{
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .nav-link{
@@ -83,7 +102,7 @@ footer{
     display: inline-block;
     margin: 15px;
     text-transform: uppercase;
-    font-size: 0.70rem;
+    font-size: 0.75rem;
     letter-spacing: 0.5px;
     color: var(--text-color);
     font-weight: 500;
@@ -110,7 +129,7 @@ footer{
     display: inline-block;
     margin: 15px;
     text-transform: uppercase;
-    font-size: 0.70rem;
+    font-size: 0.75rem;
     letter-spacing: 0.5px;
     color: var(--text-color);
     font-weight: 500;
@@ -142,6 +161,9 @@ footer{
 
 
 
+
+
+
 /* Showcase Area Styling */
 .sub-heading{
     color: #fff;
@@ -150,7 +172,7 @@ footer{
     letter-spacing: 0.5px;
     border-left: 3px solid var(--main-color-2);
     padding: 0.13rem 0.75rem;
-    margin-bottom: .50rem;
+    margin-bottom: 1rem;
     font-weight: 500;
 }
 .text{
@@ -170,7 +192,6 @@ footer{
     height: calc(100vh - 120px);
     max-height: 600px;
     align-items: center;
-    padding-left: 15px;
 }
 
 .showcase-area .heading{
@@ -179,6 +200,10 @@ footer{
 
 .showcase-area .text{
     font-size: 1rem;
+}
+
+.showcase-area .showcase-info{
+    margin-left: 150px;
 }
 
 .showcase-info span{
@@ -505,32 +530,44 @@ textarea.form-input{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer section styling */
-
-footer{
+footer .container{
+    margin-left: 0;
     color: var(--text-color);
-    background-color: red;
-    text-align: center;
-    height: 50px;
-    margin: 0;
-}
-.footer__data{
+    background-color: var(--bg-color-2);
+    padding: 20px 23px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 
-.text__footer span a{
+footer span a{
     color: var(--main-color-1);
 }
 
-footer .text__footer span a:hover{
+footer span a:hover{
     text-decoration: underline;
 }
 
 .footer__links{
-    padding: 15px 5px;
+    margin-left: 0;
+    padding: 17px 23px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
     transition: 0.3s;
 }
 
@@ -547,6 +584,35 @@ footer .text__footer span a:hover{
     color: var(--heading-color);
 }
 
-.text__footer{
-    color: black;
+/* ==== MediaQ ==== */
+@media screen and (max-width: 880px){
+    .showcase-area .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        margin: 15px;
+    }
+    .showcase-area .showcase-info{
+        margin: 5px;
+    }
+
+    .showcase-area .heading{
+        font-size: 2.5rem;
+    }
+
+    .showcase-area .text{
+        font-size: 1rem;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .navbar{
+        justify-content: center;
+    }
+    .logo{
+        margin-left: 0;
+    }
 }
