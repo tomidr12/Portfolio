@@ -638,14 +638,6 @@ footer .text__footer span a:hover {
 
 @media screen and (min-width: 800px) {
 
-    .showcase-info-about {}
-
-    .text__about,
-    .heading__about,
-    .secondary-btn {}
-
-    .text__about {}
-
     .image__about {
         width: 300px;
         height: 300px;
