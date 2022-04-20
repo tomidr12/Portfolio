@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Website Theme*/
-:root{
+:root {
     --hue-1: 257;
     --hue-2: 47;
     --bg-color: hsl(var(--hue-1), 100%, 97%);
@@ -19,7 +19,7 @@
 
 *,
 *::before,
-*::after{
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -27,7 +27,7 @@
     text-decoration: none;
 }
 
-body{
+body {
     background: linear-gradient(#6d33ff, #fff);
     min-height: 100vh;
     position: relative;
@@ -37,7 +37,7 @@ body{
 }
 
 /* GRID */
-body{
+body {
     max-height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -46,25 +46,25 @@ body{
     grid-row-gap: 0px;
 }
 
-header{
+header {
     grid-area: 1 / 1 / 2 / 5;
 }
 
-main{
+main {
     grid-area: 2 / 1 / 5 / 5;
 }
 
-footer{
+footer {
     grid-area: 5 / 1 / 6 / 5;
 }
 
 /* Navbar Styling */
-.container{
+.container {
     position: relative;
     width: 100vw;
 }
 
-.logo{
+.logo {
     margin-left: 120px;
     margin-right: 1.5rem;
     font-family: "Abril Fatface", cursive;
@@ -73,11 +73,11 @@ footer{
     letter-spacing: 1px;
 }
 
-.logo span{
+.logo span {
     color: var(--main-color-1);
 }
 
-.sub-heading{
+.sub-heading {
     color: #fff;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -88,7 +88,7 @@ footer{
     font-weight: 500;
 }
 
-.heading{
+.heading {
     color: var(--heading-color);
     font-size: 3rem;
     font-family: "Abril Fatface", cursive;
@@ -96,36 +96,36 @@ footer{
     line-height: 1.3;
 }
 
-.text{
+.text {
     color: #fff;
     margin-left: 0;
     font-size: 0.9rem;
 }
 
-nav.container{
+nav.container {
     background-color: var(--bg-color-2);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-header .logo{
+header .logo {
     height: 120px;
     line-height: 120px;
 }
 
-.links{
+.links {
     display: flex;
     justify-content: space-between;
 }
 
-.links ul{
+.links ul {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.nav-link{
+.nav-link {
     position: relative;
     display: inline-block;
     margin: 0 1rem;
@@ -138,7 +138,7 @@ header .logo{
     transition: 0.3s;
 }
 
-.nav-link::after{
+.nav-link::after {
     content: "";
     position: absolute;
     width: 0;
@@ -152,7 +152,7 @@ header .logo{
     transition: .3s;
 }
 
-.active{
+.active {
     position: relative;
     display: inline-block;
     margin: 0 1rem;
@@ -165,7 +165,7 @@ header .logo{
     transition: 0.3s;
 }
 
-.active::before{
+.active::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -178,24 +178,28 @@ header .logo{
     opacity: 0.3;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--heading-color);
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after {
     width: 100%;
     opacity: 0.2;
 }
 
 
+
+
+
+
 /* Showcase Area Styling */
-.showcase-area{
+.showcase-area {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-.showcase-area .container{
+.showcase-area .container {
     display: grid;
     grid-template-columns: 1fr 550px;
     height: calc(100vh - 120px);
@@ -203,29 +207,29 @@ header .logo{
     align-items: center;
 }
 
-.showcase-area .heading{
+.showcase-area .heading {
     font-size: 3.5rem;
 }
 
-.showcase-area .text{
+.showcase-area .text {
     font-size: 1rem;
 }
 
-.showcase-area .showcase-info{
+.showcase-area .showcase-info {
     margin-left: 150px;
 }
 
-.showcase-info span{
+.showcase-info span {
     color: var(--main-color-1);
 }
 
-.cta{
+.cta {
     margin-top: 15px;
     display: flex;
     align-items: center;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 0.9rem 1.75rem;
     border-radius: 17px;
@@ -237,11 +241,11 @@ header .logo{
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--heading-color);
 }
 
-.btn.secondary-btn{
+.btn.secondary-btn {
     margin-top: 5px;
     position: relative;
     background: transparent;
@@ -254,7 +258,7 @@ header .logo{
     padding: 0.15rem 0;
 }
 
-.btn.secondary-btn::before{
+.btn.secondary-btn::before {
     content: "";
     position: absolute;
     width: 0%;
@@ -265,40 +269,41 @@ header .logo{
     transition: 0.3s ease-in-out;
 }
 
-.btn.secondary-btn:hover::before{
+.btn.secondary-btn:hover::before {
     width: 100%;
 }
 
 /* About Section Styling */
 
-.showcase-info-about{
-    margin:  50px;
+.showcase-info-about {
+    margin: 50px;
 }
 
-.showcase-info-about span{
+.showcase-info-about span {
     color: var(--main-color-1);
 }
 
 /* Services Section Styling */
-.heading.services-h1{
+.heading.services-h1 {
     text-align: center;
     margin-bottom: 15px;
 }
-.services{
+
+.services {
     color: var(--text-color);
     margin: 50px;
     align-items: center;
     justify-content: center;
 }
 
-.services .serv-content{
+.services .serv-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
 
-.services .serv-content .card{
+.services .serv-content .card {
     margin-bottom: 15px;
     width: calc(50% - 50px);
     background: white;
@@ -309,34 +314,34 @@ header .logo{
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover{
+.services .serv-content .card:hover {
     background: var(--main-color-dark-1);
     color: #fff;
 }
 
-.services .serv-content .card i{
+.services .serv-content .card i {
     font-size: 50px;
     color: var(--main-color-1);
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover i{
+.services .serv-content .card:hover i {
     color: #fff;
 }
 
-.services .serv-content .card .text{
+.services .serv-content .card .text {
     color: var(--main-color-1);
     font-weight: 500;
     margin: 10px 0 7px 0;
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover .text{
+.services .serv-content .card:hover .text {
     color: #fff;
 }
 
 /* Skills Section Styling */
-.skills .skills-content{
+.skills .skills-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -344,21 +349,21 @@ header .logo{
     margin: 150px;
 }
 
-.skills .skills-content .column{
+.skills .skills-content .column {
     width: calc(50% - 30px);
 }
 
-.skills .skills-content .left .text{
+.skills .skills-content .left .text {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-.skills .skills-content .left p{
+.skills .skills-content .left p {
     text-align: justify;
 }
 
-.skills .skills-content .left a{
+.skills .skills-content .left a {
     display: inline-block;
     background: var(--main-color-1);
     color: #fff;
@@ -368,38 +373,38 @@ header .logo{
     margin-top: 20px;
     border-radius: 6px;
     border: solid 2px var(--main-color-1);
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-.skills .skills-content .left a:hover{
+.skills .skills-content .left a:hover {
     color: var(--main-color-1);
     background: none;
 }
 
-.skills .skills-content .right .bars{
+.skills .skills-content .right .bars {
     margin-bottom: 15px;
 }
 
-.skills .skills-content .right .infor{
+.skills .skills-content .right .infor {
     display: flex;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
 }
 
-.skills .skills-content .right span{
+.skills .skills-content .right span {
     font-weight: 500;
     font-size: 18px;
 }
 
-.skills .skills-content .right .line{
+.skills .skills-content .right .line {
     height: 5px;
     width: 100%;
     background: #fff;
     position: relative;
 }
 
-.skills .skills-content .right .line::before{
+.skills .skills-content .right .line::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -408,46 +413,49 @@ header .logo{
     background: var(--main-color-1);
 }
 
-.skills-content .right .html::before{
+.skills-content .right .html::before {
     width: 90%;
 }
 
-.skills-content .right .css::before{
+.skills-content .right .css::before {
     width: 60%;
 }
 
-.skills-content .right .js::before{
+.skills-content .right .js::before {
     width: 40%;
 }
 
-.skills-content .right .php::before{
+.skills-content .right .php::before {
     width: 10%;
 }
-.skills-content .right .py::before{
+
+.skills-content .right .py::before {
     width: 20%;
 }
 
 /* Contact Section Stying */
-.contact{
+.contact {
     margin: 50px;
 }
 
-.contact .container{
+.contact .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
 }
-.contact-info{
+
+.contact-info {
     align-content: center;
     text-align: center;
 }
-.mail{
+
+.mail {
     color: var(--main-color-1);
     font-weight: 500;
     font-size: 1.1rem;
 }
 
-.mail i{
+.mail i {
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 2px;
@@ -455,15 +463,15 @@ header .logo{
     transition: 0.3s margin-left;
 }
 
-.mail:hover{
+.mail:hover {
     color: var(--main-color-dark-1);
 }
 
-.mail:hover i{
+.mail:hover i {
     margin-left: 10px;
 }
 
-.contact-form{
+.contact-form {
     background-color: var(--bg-color-2);
     border-radius: 20px;
     padding: 3.5rem 3rem;
@@ -472,14 +480,15 @@ header .logo{
     margin-bottom: 15px;
 }
 
-.contact-form h3{
+.contact-form h3 {
     color: var(--heading-color);
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 1.6rem;
     line-height: 0.9;
 }
-.sub-heading-contact{
+
+.sub-heading-contact {
     color: #fff;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -488,7 +497,8 @@ header .logo{
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.sub-heading-contact span{
+
+.sub-heading-contact span {
     color: var(--main-color-2);
     font-size: 1rem;
     text-transform: uppercase;
@@ -497,7 +507,8 @@ header .logo{
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.form-input{
+
+.form-input {
     display: inline-block;
     padding: 0.9rem 1.5rem;
     background: var(--bg-color-3);
@@ -511,11 +522,11 @@ header .logo{
     transition: 0.3s;
 }
 
-.form-input::placeholder{
+.form-input::placeholder {
     color: var(--text-color);
 }
 
-.form-input:hover{
+.form-input:hover {
     filter: brightness(97%);
 }
 
@@ -525,15 +536,16 @@ header .logo{
     border-color: var(--main-color-1);
 }
 
-textarea.form-input{
+textarea.form-input {
     resize: none;
     min-height: 170px;
 }
 
-.contact-form .form-input{
+.contact-form .form-input {
     margin-bottom: 1.5rem;
 }
-.maps{
+
+.maps {
     margin-top: 15px;
     align-items: center;
 }
@@ -552,7 +564,7 @@ textarea.form-input{
 
 
 /* footer section styling */
-footer .container{
+footer .container {
     margin-left: 0;
     color: var(--text-color);
     background-color: var(--bg-color-2);
@@ -563,15 +575,15 @@ footer .container{
     bottom: 0;
 }
 
-footer span a{
+footer span a {
     color: var(--main-color-1);
 }
 
-footer span a:hover{
+footer span a:hover {
     text-decoration: underline;
 }
 
-.footer__links{
+.footer__links {
     margin-left: 0;
     padding: 17px 23px;
     text-align: left;
@@ -580,22 +592,23 @@ footer span a:hover{
     transition: 0.3s;
 }
 
-.fa-github{
+.fa-github {
     padding-right: 5px;
 }
-.footer__links i{
+
+.footer__links i {
     color: var(--main-color-1);
     font-size: 20px;
     transition: 0.3s;
 }
 
-.footer__links i:hover{
+.footer__links i:hover {
     color: var(--heading-color);
 }
 
 /* ==== MediaQ ==== */
-@media screen and (max-width: 880px){
-    .showcase-area .container{
+@media screen and (max-width: 880px) {
+    .showcase-area .container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -603,25 +616,27 @@ footer span a:hover{
         justify-content: center;
         margin: 15px;
     }
-.showcase-area .showcase-info{
+
+    .showcase-area .showcase-info {
         margin: 5px;
     }
 
-    .showcase-area .heading{
+    .showcase-area .heading {
         font-size: 2.5rem;
     }
 
-    .showcase-area .text{
+    .showcase-area .text {
         font-size: 1rem;
         margin: 5px;
     }
 }
 
-@media screen and (max-width: 660px){
-    .container{
+@media screen and (max-width: 660px) {
+    .container {
         justify-content: center;
     }
-    .logo{
+
+    .logo {
         margin-left: 0;
     }
 }
