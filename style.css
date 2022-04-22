@@ -29,7 +29,7 @@
 
 body {
     background: linear-gradient(#6d33ff, #fff);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     font-family: "Poppins", sans-serif;
 
 }
@@ -618,6 +618,7 @@ footer .text__footer span a:hover {
     .text__about {
         font-size: .85rem;
     }
+
     .logo {
         font-size: 2.5rem;
     }
