@@ -28,6 +28,7 @@
 }
 
 body {
+    background: linear-gradient(#6d33ff, #fff);
     background-repeat: no-repeat;
     font-family: "Poppins", sans-serif;
 
@@ -93,6 +94,47 @@ footer {
     transition: 0.3s;
 }
 
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--main-color-1);
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s;
+}
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--main-color-1);
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.nav-link:hover {
+    color: var(--heading-color);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    opacity: 0.2;
+}
+
+
 
 /* Showcase Area Styling */
 .sub-heading {
@@ -138,6 +180,10 @@ footer {
     font-size: 1rem;
 }
 
+.showcase-info span {
+    color: var(--main-color-1);
+}
+
 .cta {
     margin-top: 15px;
     display: flex;
@@ -155,6 +201,11 @@ footer {
     text-transform: capitalize;
     transition: 0.3s;
 }
+
+.btn:hover {
+    background-color: var(--heading-color);
+}
+
 
 /* About Section Styling */
 .showcase-info-about {
@@ -203,6 +254,17 @@ footer {
     padding: 0.15rem 0;
 }
 
+.btn.secondary-btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    bottom: -2.5px;
+    left: 0;
+    background-color: var(--main-color-1);
+    transition: 0.3s ease-in-out;
+}
+
 .image__about {
     width: 200px;
     height: 200px;
@@ -212,6 +274,10 @@ footer {
 .person {
     width: 100%;
     height: 100%;
+}
+
+.btn.secondary-btn:hover::before {
+    width: 100%;
 }
 
 /* Services Section Styling */
@@ -247,10 +313,19 @@ footer {
     transition: 0.3s;
 }
 
+.services .serv-content .card:hover {
+    background: var(--main-color-dark-1);
+    color: #fff;
+}
+
 .services .serv-content .card i {
     font-size: 25px;
     color: var(--main-color-1);
     transition: 0.3s;
+}
+
+.services .serv-content .card:hover i {
+    color: #fff;
 }
 
 .services .serv-content .card .text {
@@ -311,6 +386,10 @@ footer {
     transition: all 0.3s ease;
 }
 
+.skills .skills-content .left a:hover {
+    color: var(--main-color-1);
+    background: none;
+}
 
 .skills .skills-content .right .bars {
     margin-bottom: 15px;
@@ -339,6 +418,14 @@ footer {
     position: relative;
 }
 
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--main-color-1);
+}
 
 .skills-content .right .html::before {
     width: 90%;
@@ -389,6 +476,14 @@ footer {
     transition: 0.3s margin-left;
 }
 
+.mail:hover {
+    color: var(--main-color-dark-1);
+}
+
+.mail:hover i {
+    margin-left: 10px;
+}
+
 .contact-form {
     background-color: var(--bg-color-2);
     border-radius: 20px;
@@ -429,6 +524,20 @@ footer {
     color: var(--heading-color);
     outline: none;
     transition: 0.3s;
+}
+
+.form-input::placeholder {
+    color: var(--text-color);
+}
+
+.form-input:hover {
+    filter: brightness(97%);
+}
+
+.form-input:valid {
+    filter: brightness(100%);
+    background: var(--bg-color-1);
+    border-color: var(--main-color-1);
 }
 
 textarea.form-input {
@@ -489,6 +598,10 @@ footer .text__footer span a:hover {
     color: var(--main-color-1);
     font-size: 20px;
     transition: 0.3s;
+}
+
+.footer__links i:hover {
+    color: var(--heading-color);
 }
 
 .text__footer {
