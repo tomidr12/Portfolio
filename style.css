@@ -26,9 +26,11 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-p{
+
+p {
     margin: 0;
 }
+
 body {
     background: linear-gradient(#6d33ff, #fff);
     background-repeat: no-repeat;
@@ -141,6 +143,18 @@ footer {
 }
 
 /* Showcase Area Styling */
+.showcase-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 120px);
+    max-height: 600px;
+    padding-left: 15px;
+}
+
 .sub-heading {
     color: #fff;
     text-transform: uppercase;
@@ -155,37 +169,13 @@ footer {
 .text {
     color: #fff;
     margin-left: 0;
-    font-size: 0.9rem;
-}
-
-.showcase-area {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.showcase-info {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: calc(100vh - 120px);
-    max-height: 600px;
-    padding-left: 15px;
-}
-
-.heading {
-    font-size: 2rem;
-}
-
-.text {
     font-size: 1rem;
 }
 
-.showcase-info span {
-    color: var(--main-color-1);
+.heading {
+    color: var(--heading-color);
+    font-size: 2rem;
+    font-family: 'Abril Fatface';
 }
 
 .cta {
@@ -213,16 +203,22 @@ footer {
 
 
 /* About Section Styling */
-.card__about{
+.card__about {
     background-color: transparent;
     border: 0;
 }
+
 .card-title {
-    color: white;
+    font-family: "Abril Fatface", cursive;
+    color: var(--heading-color);
     font-size: 2rem
 }
 
-.card-text span{
+.about__card__t {
+    color: white;
+}
+
+.card-text span {
     color: var(--main-color-1);
     text-shadow: 0 0 5px white;
     font-weight: bold;
@@ -261,17 +257,18 @@ footer {
 
 /* Services Section Styling */
 
-.services__heading {
-    color: black;
-    text-align: center;
-    margin: 15px;
-    font-size: 2rem;
-}
-
 .services {
     color: var(--text-color);
     align-items: center;
     justify-content: center;
+}
+
+.services__heading {
+    color: var(--heading-color);
+    text-align: center;
+    margin: 15px;
+    font-size: 2rem;
+    font-family: "Abril Fatface", cursive;
 }
 
 .services .serv-content {
@@ -282,6 +279,7 @@ footer {
 }
 
 .services .serv-content .card {
+    box-shadow: 0 0 10px var(--main-color-1);
     margin-bottom: 15px;
     margin: 15px;
     background: white;
@@ -307,17 +305,25 @@ footer {
     color: #fff;
 }
 
-.services .serv-content .card .text {
+.services .serv-content .card .card-title {
     color: var(--main-color-1);
     font-weight: 500;
     transition: 0.3s;
 }
 
-.services .serv-content .card:hover .text {
+.services .serv-content .card:hover .card-title {
     color: #fff;
 }
 
 /* Skills Section Styling */
+.skills__heading {
+    font-family: 'Abril Fatface';
+    color: var(--heading-color);
+    text-align: center;
+    margin: 15px;
+    font-size: 2rem;
+}
+
 .skills-content {
     display: flex;
     flex-wrap: wrap;
@@ -336,21 +342,12 @@ footer {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 10px;
-    text-align: center;
-}
-
-.skills__heading {
-    color: black;
-    text-align: center;
-    margin: 15px;
-    font-size: 2rem;
-}
-
-.skills .skills-content .left p {
     text-align: justify;
+
 }
 
 .skills .skills-content .left a {
+    text-decoration: none;
     display: inline-block;
     background: var(--main-color-1);
     color: #fff;
@@ -370,6 +367,10 @@ footer {
     background: none;
 }
 
+.progress-bar {
+    background-color: var(--main-color-1);
+}
+
 .skills .skills-content .right .bars {
     margin-bottom: 15px;
 }
@@ -378,52 +379,9 @@ footer {
     width: 100%;
 }
 
-.skills .skills-content .right .infor {
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .skills .skills-content .right span {
     font-weight: 500;
     font-size: 18px;
-}
-
-.skills .skills-content .right .line {
-    height: 5px;
-    width: 100%;
-    background: #fff;
-    position: relative;
-}
-
-.skills .skills-content .right .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: var(--main-color-1);
-}
-
-.skills-content .right .html::before {
-    width: 90%;
-}
-
-.skills-content .right .css::before {
-    width: 60%;
-}
-
-.skills-content .right .js::before {
-    width: 40%;
-}
-
-.skills-content .right .php::before {
-    width: 10%;
-}
-
-.skills-content .right .py::before {
-    width: 20%;
 }
 
 /* Contact Section Stying */
@@ -594,24 +552,35 @@ footer .text__footer span a:hover {
 }
 
 @media screen and (min-width: 500px) {
+    .skills__heading {
+        font-size: 3rem;
+    }
+
+    .services__heading {
+        font-size: 2.5rem;
+    }
+
     .card-title {
         font-size: 2.5rem;
     }
-    
+
     .card-text {
         font-size: 1.2rem;
     }
-    .card-img-top{
+
+    .card-img-top {
         max-width: 500px;
         margin: auto;
     }
+
     .active::before {
         width: 10%;
     }
+
     .nav-link:hover::after {
         width: 10%;
     }
-    
+
     .heading {
         font-size: 3.5rem;
     }
@@ -644,6 +613,10 @@ footer .text__footer span a:hover {
 }
 
 @media screen and (min-width: 800px) {
+    .services__heading {
+        font-size: 3rem;
+    }
+
     .navbar {
         width: 100%;
     }
@@ -680,13 +653,15 @@ footer .text__footer span a:hover {
 }
 
 @media screen and (min-width: 990px) {
-    .navbar-nav{
+    .navbar-nav {
         display: flex;
         justify-content: flex-end;
     }
+
     .active::before {
         width: 100%;
     }
+
     .nav-link:hover::after {
         width: 100%;
     }
