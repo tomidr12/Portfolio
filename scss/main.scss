@@ -1,9 +1,8 @@
-@import './components/base';
+@import './pages/base';
 @import './components/navbar';
-@import './components/home';
-@import './components/about';
-@import './components/services';
-@import './components/skills';
-@import './components/contact';
+@import './pages/home';
+@import './pages/about';
+@import './pages/services';
+@import './pages/skills';
+@import './pages/contact';
 @import './components/footer';
-@import './components/media';
