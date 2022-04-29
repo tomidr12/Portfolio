@@ -1,0 +1,97 @@
+/* Navbar Styling */
+.navbar {
+    background-color: $bg-color-2-w;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    font-family: "Abril Fatface", cursive;
+    font-size: 2rem;
+    color: $heading-color;
+    letter-spacing: 1px;
+}
+
+.navbar-brand span {
+    color: $main-color-1;
+}
+
+.nav-link {
+    position: relative;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 0.70rem;
+    letter-spacing: 0.5px;
+    color: $text-color;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $main-color-1;
+    bottom: 0;
+    top: 15px;
+    left: -3px;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s;
+}
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    top: 15px;
+    border-radius: 5px;
+    background-color: $main-color-1;
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.nav-link:hover {
+    color: $heading-color;
+}
+
+.nav-link:hover::after {
+    width: 20%;
+    opacity: 0.2;
+}
+
+@media screen and (min-width: 500px) {
+    .active::before {
+        width: 10%;
+    }
+
+    .nav-link:hover::after {
+        width: 10%;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .active::before {
+        width: 100%;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+}

@@ -1,0 +1,73 @@
+/* About Section Styling */
+.card__about {
+    background-color: transparent;
+    border: 0;
+}
+
+.card-title {
+    font-family: "Abril Fatface", cursive;
+    color: $heading-color;
+    font-size: 2rem
+}
+
+.about__card__t {
+    color: $bg-color-2-w;
+}
+
+.card-text span {
+    color: $main-color-1;
+    text-shadow: 0 0 5px $bg-color-2-w;
+    font-weight: bold;
+}
+
+.btn.secondary-btn {
+    margin: 5px auto;
+    position: relative;
+    display: block;
+    margin: auto;
+    width: fit-content;
+    background: transparent;
+    color: $main-color-1;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    border-bottom: 2.5px solid $main-color-2;
+    border-radius: 0px;
+    padding: 0.15rem 0;
+}
+
+.btn.secondary-btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    bottom: -2.5px;
+    left: 0;
+    background-color: $main-color-1;
+    transition: 0.3s ease-in-out;
+}
+
+.btn.secondary-btn:hover::before {
+    width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+    .card-title {
+        font-size: 2.5rem;
+    }
+
+    .card-text {
+        font-size: 1.2rem;
+    }
+
+    .card-img-top {
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .card-title {
+        font-size: 3rem;
+    }
+}
