@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Website Theme*/
-:root {
-    $hue-1: 257;
-    $hue-2: 47;
-    $bg-color: hsl(var($hue-1), 100%, 97%);
-    $main-color-1: hsl(var($hue-1), 100%, 60%);
-    $main-color-dark-1: hsl(var($hue-1), 69%, 50%);
-    $main-color-2: hsl(var($hue-2), 100%, 61%);
-    $main-color-dark-2: hsl(var($hue-2), 82%, 55%);
-    $bg-color-1: hsl(var($hue-1), 100%, 97%);
-    $bg-color-2-w: #fff;
-    $bg-color-3: hsl(var($hue-1), 100%, 98%);
-    $bg-color-transparent: rgba(255, 255, 255, 0.6);
-    $heading-color: hsl(var($hue-1), 61%, 24%);
-    $text-color: hsl(var($hue-1), 17%, 63%)
-}
+
+$hue-1: 257;
+$hue-2: 47;
+$bg-color: hsl($hue-1, 100%, 97%);
+$main-color-1: hsl($hue-1, 100%, 60%);
+$main-color-dark-1: hsl($hue-1, 69%, 50%);
+$main-color-2: hsl($hue-2, 100%, 61%);
+$main-color-dark-2: hsl($hue-2, 82%, 55%);
+$bg-color-1: hsl($hue-1, 100%, 97%);
+$bg-color-2-w: #fff;
+$bg-color-3: hsl($hue-1, 100%, 98%);
+$bg-color-transparent: rgba(255, 255, 255, 0.6);
+$heading-color: hsl($hue-1, 61%, 24%);
+$text-color: hsl($hue-1, 17%, 63%);
 
 *,
 *::before,
@@ -34,8 +33,6 @@ p {
 body {
     background: linear-gradient(#6d33ff, #fff);
     background-repeat: no-repeat;
-    font-family: "Poppins", sans-serif;
-
 }
 
 /* GRID */

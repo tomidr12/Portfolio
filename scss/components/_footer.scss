@@ -1,50 +1,48 @@
 /* footer section styling */
 
 footer {
-    color: $text-color;
     background-color: $bg-color;
     text-align: center;
     height: 55px;
     margin: 0;
+
+    .footer__data {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text__footer {
+        color: black;
+
+        a {
+            color: $main-color-1;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer__links {
+        padding: 15px 5px;
+        transition: 0.3s;
+
+        i {
+            color: $main-color-1;
+            font-size: 20px;
+            transition: 0.3s;
+
+            &:hover {
+                color: $heading-color;
+            }
+        }
+    }
 }
 
-.footer__data {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 
-.text__footer span a {
-    color: $main-color-1;
-}
-
-footer .text__footer span a:hover {
-    text-decoration: underline;
-}
-
-.footer__links {
-    padding: 15px 5px;
-    transition: 0.3s;
-}
-
-.fa-github {
-    padding-right: 5px;
-}
-
-.footer__links i {
-    color: $main-color-1;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.footer__links i:hover {
-    color: $heading-color;
-}
-
-.text__footer {
-    color: black;
-}
 
 @media screen and (min-width: 500px) {
     .footer__data {

@@ -14,10 +14,12 @@
     color: $bg-color-2-w;
 }
 
-.card-text span {
-    color: $main-color-1;
-    text-shadow: 0 0 5px $bg-color-2-w;
-    font-weight: bold;
+.card-text {
+    span {
+        color: $main-color-1;
+        text-shadow: 0 0 5px $bg-color-2-w;
+        font-weight: bold;
+    }
 }
 
 .btn.secondary-btn {
@@ -34,21 +36,21 @@
     border-bottom: 2.5px solid $main-color-2;
     border-radius: 0px;
     padding: 0.15rem 0;
-}
 
-.btn.secondary-btn::before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2.5px;
-    bottom: -2.5px;
-    left: 0;
-    background-color: $main-color-1;
-    transition: 0.3s ease-in-out;
-}
+    & ::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2.5px;
+        bottom: -2.5px;
+        left: 0;
+        background-color: $main-color-1;
+        transition: 0.3s ease-in-out;
+    }
 
-.btn.secondary-btn:hover::before {
-    width: 100%;
+    &:hover::before {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 500px) {

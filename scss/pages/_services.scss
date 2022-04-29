@@ -4,6 +4,43 @@
     color: $text-color;
     align-items: center;
     justify-content: center;
+
+    .serv-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        .card {
+            box-shadow: 0 0 10px $main-color-1;
+            margin-bottom: 15px;
+            margin: 15px;
+            background: $bg-color-2-w;
+            text-align: center;
+            border-radius: 6px;
+            padding: 20px 25px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background: $main-color-dark-1;
+                color: $bg-color-2-w;
+            }
+
+            i {
+                font-size: 25px;
+                color: $main-color-1;
+                transition: 0.3s;
+            }
+
+            .card-title {
+                color: $main-color-1;
+                font-weight: 500;
+                transition: 0.3s;
+            }
+
+        }
+    }
 }
 
 .services__heading {
@@ -14,49 +51,14 @@
     font-family: "Abril Fatface", cursive;
 }
 
-.services .serv-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.services .serv-content .card {
-    box-shadow: 0 0 10px $main-color-1;
-    margin-bottom: 15px;
-    margin: 15px;
-    background: $bg-color-2-w;
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.services .serv-content .card:hover {
-    background: $main-color-dark-1;
-    color: $bg-color-2-w;
-}
-
-.services .serv-content .card i {
-    font-size: 25px;
-    color: $main-color-1;
-    transition: 0.3s;
-}
-
 .services .serv-content .card:hover i {
     color: $bg-color-2-w;
-}
-
-.services .serv-content .card .card-title {
-    color: $main-color-1;
-    font-weight: 500;
-    transition: 0.3s;
 }
 
 .services .serv-content .card:hover .card-title {
     color: $bg-color-2-w;
 }
+
 
 @media screen and (min-width: 500px) {
     .services__heading {

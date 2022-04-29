@@ -12,78 +12,81 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-}
 
-.skills .skills-content .column {
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.skills .skills-content .left .text {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-    text-align: justify;
-
-}
-
-.skills .skills-content .left a {
-    text-decoration: none;
-    display: inline-block;
-    background: $main-color-1;
-    color: #fff;
-    width: 150px;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    padding: 8px 16px;
-    margin: 10px auto;
-    border-radius: 6px;
-    border: solid 2px $main-color-1;
-    transition: all 0.3s ease;
-}
-
-.skills .skills-content .left a:hover {
-    color: $main-color-1;
-    background: none;
-}
-
-.progress-bar {
-    background-color: $main-color-1;
-}
-
-.skills .skills-content .right .bars {
-    margin-bottom: 15px;
-}
-
-.skills .skills-content .right {
-    width: 100%;
-}
-
-.skills .skills-content .right span {
-    font-weight: 500;
-    font-size: 18px;
-}
-
-@media screen and (min-width: 500px) {
-    .skills__heading {
-        font-size: 3rem;
-    }
-}
-
-@media screen and (min-width: 800px) {
-
-    .skills .skills-content .column {
-        width: calc(50% - 30px);
+    .column {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .skills .skills-content .left .text {
-        margin: 20px;
+    .left {
+        .text {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            background: $main-color-1;
+            color: #fff;
+            width: 150px;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            padding: 8px 16px;
+            margin: 10px auto;
+            border-radius: 6px;
+            border: solid 2px $main-color-1;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $main-color-1;
+                background: none;
+            }
+
+        }
+
     }
 
-    .skills .skills-content .left {
-        align-items: center;
+    .right {
+        width: 100%;
+
+        .bars {
+            margin-bottom: 15px;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    .progress-bar {
+        background-color: $main-color-1;
+    }
+
+    @media screen and (min-width: 500px) {
+        .skills__heading {
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+
+        .skills .skills-content .column {
+            width: calc(50% - 30px);
+        }
+
+        .skills .skills-content .left .text {
+            margin: 20px;
+        }
+
+        .skills .skills-content .left {
+            align-items: center;
+        }
     }
 }

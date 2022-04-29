@@ -11,10 +11,10 @@
     font-size: 2rem;
     color: $heading-color;
     letter-spacing: 1px;
-}
 
-.navbar-brand span {
-    color: $main-color-1;
+    span {
+        color: $main-color-1;
+    }
 }
 
 .nav-link {
@@ -27,48 +27,49 @@
     font-weight: 500;
     opacity: 0.9;
     transition: 0.3s;
-}
 
-.nav-link::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 10px;
-    border-radius: 5px;
-    background-color: $main-color-1;
-    bottom: 0;
-    top: 15px;
-    left: -3px;
-    z-index: -1;
-    opacity: 0;
-    transition: .3s;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $main-color-1;
+        bottom: 0;
+        top: 15px;
+        left: -3px;
+        z-index: -1;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    &:hover {
+        color: $heading-color;
+
+        &::after {
+            width: 20%;
+            opacity: 0.2;
+        }
+    }
+
 }
 
 .active {
     position: relative;
-}
 
-.active::before {
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 10px;
-    top: 15px;
-    border-radius: 5px;
-    background-color: $main-color-1;
-    bottom: 0;
-    left: -5px;
-    z-index: -1;
-    opacity: 0.3;
-}
-
-.nav-link:hover {
-    color: $heading-color;
-}
-
-.nav-link:hover::after {
-    width: 20%;
-    opacity: 0.2;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 10px;
+        top: 15px;
+        border-radius: 5px;
+        background-color: $main-color-1;
+        bottom: 0;
+        left: -5px;
+        z-index: -1;
+        opacity: 0.3;
+    }
 }
 
 @media screen and (min-width: 500px) {

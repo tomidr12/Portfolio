@@ -1,8 +1,6 @@
 /* Home Styling */
 .showcase-info {
-    height: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -50,11 +48,11 @@
     letter-spacing: 0.4px;
     text-transform: capitalize;
     transition: 0.3s;
-}
 
-.btn:hover {
-    background-color: $heading-color;
-    color: $bg-color-2-w;
+    &:hover {
+        background-color: $heading-color;
+        color: $bg-color-2-w;
+    }
 }
 
 @media screen and (min-width: 500px) {
