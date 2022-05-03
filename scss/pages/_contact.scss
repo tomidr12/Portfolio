@@ -8,48 +8,8 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-}
 
-.mail {
-    color: $main-color-1;
-    font-weight: 500;
-    font-size: 1.1rem;
-
-    i {
-        display: inline-block;
-        font-size: 1.5rem;
-        margin-left: 2px;
-        transform: translateY(3px);
-        transition: 0.3s margin-left;
-    }
-
-    &:hover {
-        color: $main-color-dark-1;
-
-        &:hover i {
-            margin-left: 10px;
-        }
-    }
-
-    .contact-form {
-        background-color: $bg-color-2-w;
-        border-radius: 20px;
-        padding: 3.5rem 3rem;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-        margin: 15px;
-
-        h3 {
-            color: $heading-color;
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-bottom: 1.6rem;
-            line-height: 0.9;
-        }
-    }
-
-    .sub-heading-contact {
+    .sub-heading {
         color: $bg-color-2-w;
         text-transform: uppercase;
         font-size: 0.85rem;
@@ -59,70 +19,113 @@
         font-weight: 500;
     }
 
-    .form-input {
-        display: inline-block;
-        padding: 0.9rem 1.5rem;
-        background: $bg-color-3;
-        border: 2px solid $bg-color-3;
-        width: 100%;
-        border-radius: 17px;
-        font-family: inherit;
-        font-size: 0.85rem;
-        color: $heading-color;
-        outline: none;
-        transition: 0.3s;
+    .mail {
+        color: $main-color-1;
+        font-weight: 500;
+        font-size: 1.1rem;
 
-        &::placeholder {
-            color: $text-color;
+        i {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-left: 2px;
+            transform: translateY(3px);
+            transition: 0.3s margin-left;
         }
 
         &:hover {
-            filter: brightness(97%);
-        }
+            color: $main-color-dark-1;
 
-        &:valid {
-            filter: brightness(100%);
-            background: $bg-color-1;
-            border-color: $main-color-1;
+            &:hover i {
+                margin-left: 10px;
+            }
         }
     }
+}
 
-    textarea.form-input {
-        resize: none;
-        min-height: 170px;
+.contact-form {
+    background-color: $bg-color-2-w;
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin: 15px;
+
+    h3 {
+        color: $heading-color;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+        line-height: 0.9;
+    }
+}
+
+.maps {
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.form-input {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    background: $bg-color-3;
+    border: 2px solid $bg-color-3;
+    width: 100%;
+    border-radius: 17px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: $heading-color;
+    outline: none;
+    transition: 0.3s;
+
+    &::placeholder {
+        color: $text-color;
     }
 
-    .contact-form .form-input {
-        margin-bottom: 1.5rem;
+    &:hover {
+        filter: brightness(97%);
     }
 
+    &:valid {
+        filter: brightness(100%);
+        background: $bg-color-1;
+        border-color: $main-color-1;
+    }
+}
+
+textarea.form-input {
+    resize: none;
+    min-height: 170px;
+}
+
+.contact-form .form-input {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 500px) {
     .maps {
-        width: 300px;
-        height: 200px;
-        margin: 15px;
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .contact-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .maps {
+        width: 400px;
+        height: 300px;
     }
 
-    iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    @media screen and (min-width: 500px) {
-        .maps {
-            width: 350px;
-            height: 250px;
-        }
-    }
-
-    @media screen and (min-width: 800px) {
-        .contact-section {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .maps {
-            width: 400px;
-            height: 300px;
-        }
-    }
 }
