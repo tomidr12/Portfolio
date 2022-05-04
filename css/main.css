@@ -200,7 +200,7 @@ footer {
   border-bottom: 2.5px solid #ffd438;
   border-radius: 0px;
   padding: 0.15rem 0; }
-  .btn.secondary-btn ::before {
+  .btn.secondary-btn::before {
     content: "";
     position: absolute;
     width: 0%;
