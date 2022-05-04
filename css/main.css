@@ -329,16 +329,18 @@ footer {
       font-size: 18px; }
   .skills-content .progress-bar {
     background-color: #6d33ff; }
-  @media screen and (min-width: 500px) {
-    .skills-content .skills__heading {
-      font-size: 3rem; } }
-  @media screen and (min-width: 800px) {
-    .skills-content .skills .skills-content .column {
-      width: calc(50% - 30px); }
-    .skills-content .skills .skills-content .left .text {
-      margin: 20px; }
-    .skills-content .skills .skills-content .left {
-      align-items: center; } }
+
+@media screen and (min-width: 500px) {
+  .skills__heading {
+    font-size: 3rem; } }
+
+@media screen and (min-width: 800px) {
+  .skills .skills-content .column {
+    width: calc(50% - 30px); }
+  .skills .skills-content .left .text {
+    margin: 20px; }
+  .skills .skills-content .left {
+    align-items: center; } }
 
 /* Contact Section Stying */
 .contact-info {
