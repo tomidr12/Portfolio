@@ -12,10 +12,12 @@
 p {
   margin: 0; }
 
+html::-webkit-scrollbar {
+  display: none; }
+
 body {
   background: linear-gradient(#6d33ff, #fff);
-  background-repeat: no-repeat;
-  overflow: hidden; }
+  background-repeat: no-repeat; }
 
 /* GRID */
 body {
