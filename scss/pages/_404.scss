@@ -6,28 +6,34 @@
     width: 100%;
     height: 100%;
     line-height: 1.5em;
+
     .error-text {
         font-size: .85rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: #000;
+
         img {
             height: 342px;
         }
+
         span {
             position: relative;
             font-size: 1.5rem;
             font-weight: 900;
             margin-bottom: 25px;
         }
+
         p {
             font-size: 19px;
             margin: 10px;
             text-align: center;
 
         }
-        .back { // Homepage bButton
+
+        .back {
+            // Homepage bButton
             background: #fff;
             color: #000;
             font-size: 20px;
@@ -37,10 +43,11 @@
             border-radius: 500px;
             box-shadow: 0 20px 70px 4px rgba(0, 0, 0, 0.1), inset 7px 33px 0 0px $main-color-2;
             font-weight: 900;
-            transition: all 300ms ease; 
+            transition: all 300ms ease;
+
             &:hover {
                 transform: translateY(-13px);
-                box-shadow: 0 35px 90px 4px rgba(0,0,0, .3), inset 0px 0 0 3px #000;
+                box-shadow: 0 35px 90px 4px rgba(0, 0, 0, .3), inset 0px 0 0 3px #000;
             }
         }
     }
