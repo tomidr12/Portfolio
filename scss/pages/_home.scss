@@ -33,8 +33,7 @@
 
 .cta {
     margin-top: 15px;
-    display: flex;
-    align-items: center;
+    @include flex
 }
 
 .btn {

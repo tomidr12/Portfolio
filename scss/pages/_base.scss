@@ -16,6 +16,15 @@ $bg-color-transparent: rgba(255, 255, 255, 0.6);
 $heading-color: hsl($hue-1, 61%, 24%);
 $text-color: hsl($hue-1, 17%, 63%);
 
+$colors: (
+    heading-color: hsl($hue-1, 61%, 24%),
+);
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
 *,
 *::before,
 *::after {

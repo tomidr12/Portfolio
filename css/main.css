@@ -138,7 +138,7 @@ main {
   display: flex;
   align-items: center; }
 
-.btn {
+.btn, .contact-form .btn-contact {
   display: inline-block;
   padding: 0.9rem 1.75rem;
   border-radius: 17px;
@@ -148,7 +148,7 @@ main {
   letter-spacing: 0.4px;
   text-transform: capitalize;
   transition: 0.3s; }
-  .btn:hover {
+  .btn:hover, .contact-form .btn-contact:hover {
     background-color: #2d1863;
     color: #fff; }
 
@@ -176,7 +176,7 @@ main {
   text-shadow: 0 0 5px #fff;
   font-weight: bold; }
 
-.btn.secondary-btn {
+.btn.secondary-btn, .contact-form .secondary-btn.btn-contact {
   position: relative;
   display: block;
   margin: auto;
@@ -189,7 +189,7 @@ main {
   border-bottom: 2.5px solid #ffd438;
   border-radius: 0px;
   padding: 0.15rem 0; }
-  .btn.secondary-btn::before {
+  .btn.secondary-btn::before, .contact-form .secondary-btn.btn-contact::before {
     content: "";
     position: absolute;
     width: 0%;
@@ -198,7 +198,7 @@ main {
     left: 0;
     background-color: #6d33ff;
     transition: 0.3s ease-in-out; }
-  .btn.secondary-btn:hover::before {
+  .btn.secondary-btn:hover::before, .contact-form .secondary-btn.btn-contact:hover::before {
     width: 100%; }
 
 @media screen and (min-width: 500px) {
@@ -221,8 +221,8 @@ main {
   justify-content: center; }
   .services .serv-content {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around; }
     .services .serv-content .card {
       box-shadow: 0 0 10px #6d33ff;
@@ -278,18 +278,17 @@ main {
 
 .skills-content {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between; }
   .skills-content .column {
     margin: 15px;
-    display: flex;
     flex-direction: column;
     justify-content: center; }
   .skills-content .left .text {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin: 10px;
     text-align: justify; }
   .skills-content .left a {
     text-decoration: none;
@@ -299,9 +298,9 @@ main {
     width: 150px;
     font-size: 18px;
     font-weight: 500;
+    margin-left: 20px;
     text-align: center;
     padding: 8px 16px;
-    margin: 10px auto;
     border-radius: 6px;
     border: solid 2px #6d33ff;
     transition: all 0.3s ease; }
@@ -334,8 +333,8 @@ main {
 .contact-info {
   margin-top: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   text-align: center; }
   .contact-info .sub-heading {
     color: #fff;
@@ -373,6 +372,8 @@ main {
     font-weight: 500;
     margin-bottom: 1.6rem;
     line-height: 0.9; }
+  .contact-form .btn-contact {
+    border: none; }
 
 .maps {
   width: 300px;
@@ -450,13 +451,6 @@ footer {
       transition: 0.3s; }
       footer .footer__links i:hover {
         color: #2d1863; }
-
-@media screen and (min-width: 500px) {
-  .footer__data {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; } }
 
 .oopss {
   background: #6d33ff;

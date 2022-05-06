@@ -8,8 +8,7 @@ footer {
 
     .footer__data {
         width: 100%;
-        display: flex;
-        align-items: center;
+        @include flex;
         justify-content: center;
     }
 
@@ -38,16 +37,5 @@ footer {
                 color: $heading-color;
             }
         }
-    }
-}
-
-
-
-@media screen and (min-width: 500px) {
-    .footer__data {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }

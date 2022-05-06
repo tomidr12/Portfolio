@@ -8,14 +8,12 @@
 }
 
 .skills-content {
-    display: flex;
+    @include flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
 
     .column {
         margin: 15px;
-        display: flex;
         flex-direction: column;
         justify-content: center;
     }
@@ -24,7 +22,7 @@
         .text {
             font-size: 1rem;
             font-weight: 500;
-            margin-bottom: 10px;
+            margin: 10px;
             text-align: justify;
         }
 
@@ -36,9 +34,10 @@
             width: 150px;
             font-size: 18px;
             font-weight: 500;
+            margin-left: 20px;
             text-align: center;
             padding: 8px 16px;
-            margin: 10px auto;
+
             border-radius: 6px;
             border: solid 2px $main-color-1;
             transition: all 0.3s ease;

@@ -6,7 +6,7 @@
 
 .card-title {
     font-family: "Abril Fatface", cursive;
-    color: $heading-color;
+    color: map-get($colors, heading-color );
     font-size: 2rem
 }
 
