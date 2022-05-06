@@ -29,13 +29,16 @@ $text-color: hsl($hue-1, 17%, 63%);
 p {
     margin: 0;
 }
-html::-webkit-scrollbar{
+
+html::-webkit-scrollbar {
     display: none;
 }
+
 body {
     background: linear-gradient(#6d33ff, #fff);
     background-repeat: no-repeat;
 }
+
 /* GRID */
 body {
     font-family: 'Poppins';
