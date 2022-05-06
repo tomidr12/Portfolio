@@ -37,18 +37,7 @@ html::-webkit-scrollbar {
 body {
     background: linear-gradient(#6d33ff, #fff);
     background-repeat: no-repeat;
-}
-
-/* GRID */
-body {
     font-family: 'Poppins';
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: auto;
-}
-
-header {
-    grid-area: 1 / 1 / 2 / 5;
 }
 
 main {
@@ -58,12 +47,8 @@ main {
     align-items: center;
 }
 
-footer {
-    grid-area: 4 / 1 / 5 / 5;
-}
-
-@media screen and (min-height: 720px) {
+@media screen and (min-height: 500px) {
     main {
-        min-height: 87vh;
+        min-height: 86vh;
     }
 }

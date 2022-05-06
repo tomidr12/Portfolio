@@ -17,17 +17,8 @@ html::-webkit-scrollbar {
 
 body {
   background: linear-gradient(#6d33ff, #fff);
-  background-repeat: no-repeat; }
-
-/* GRID */
-body {
-  font-family: 'Poppins';
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: auto; }
-
-header {
-  grid-area: 1 / 1 / 2 / 5; }
+  background-repeat: no-repeat;
+  font-family: 'Poppins'; }
 
 main {
   min-height: 100vh;
@@ -35,12 +26,9 @@ main {
   justify-content: center;
   align-items: center; }
 
-footer {
-  grid-area: 4 / 1 / 5 / 5; }
-
-@media screen and (min-height: 720px) {
+@media screen and (min-height: 500px) {
   main {
-    min-height: 87vh; } }
+    min-height: 86vh; } }
 
 /* Navbar Styling */
 .navbar {
@@ -122,7 +110,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: calc(100vh - 120px);
   max-height: 600px;
   padding-left: 15px; }
 
@@ -190,7 +177,6 @@ footer {
   font-weight: bold; }
 
 .btn.secondary-btn {
-  margin: 5px auto;
   position: relative;
   display: block;
   margin: auto;
@@ -240,7 +226,6 @@ footer {
     justify-content: space-around; }
     .services .serv-content .card {
       box-shadow: 0 0 10px #6d33ff;
-      margin-bottom: 15px;
       margin: 15px;
       background: #fff;
       text-align: center;
@@ -351,8 +336,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  align-content: center;
   text-align: center; }
   .contact-info .sub-heading {
     color: #fff;
@@ -383,7 +366,6 @@ footer {
   padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
   margin: 15px; }
   .contact-form h3 {
     color: #2d1863;
@@ -461,8 +443,7 @@ footer {
       footer .text__footer a:hover {
         text-decoration: underline; }
   footer .footer__links {
-    padding: 15px 5px;
-    transition: 0.3s; }
+    padding: 15px 5px; }
     footer .footer__links i {
       color: #6d33ff;
       font-size: 20px;
