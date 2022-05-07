@@ -243,7 +243,8 @@ main {
       .services .serv-content .card .card-title {
         color: #6d33ff;
         font-weight: 500;
-        transition: 0.3s; }
+        transition: 0.3s;
+        font-size: 35px; }
 
 .services__heading {
   color: #2d1863;
@@ -288,7 +289,6 @@ main {
   .skills-content .left .text {
     font-size: 1rem;
     font-weight: 500;
-    margin: 10px;
     text-align: justify; }
   .skills-content .left a {
     text-decoration: none;
@@ -308,6 +308,7 @@ main {
       color: #6d33ff;
       background: none; }
   .skills-content .right {
+    margin-top: 10px;
     width: 100%; }
     .skills-content .right .bars {
       margin-bottom: 15px; }
@@ -328,6 +329,11 @@ main {
     margin: 20px; }
   .skills .skills-content .left {
     align-items: center; } }
+
+@media screen and (min-width: 1500px) {
+  .skills-content {
+    display: flex;
+    align-items: baseline; } }
 
 /* Contact Section Stying */
 .contact-info {

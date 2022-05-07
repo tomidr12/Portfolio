@@ -22,7 +22,6 @@
         .text {
             font-size: 1rem;
             font-weight: 500;
-            margin: 10px;
             text-align: justify;
         }
 
@@ -52,6 +51,7 @@
     }
 
     .right {
+        margin-top: 10px;
         width: 100%;
 
         .bars {
@@ -87,5 +87,12 @@
 
     .skills .skills-content .left {
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .skills-content{
+        display: flex;
+        align-items: baseline;
     }
 }
