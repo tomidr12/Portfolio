@@ -231,7 +231,6 @@ main {
       text-align: center;
       border-radius: 6px;
       padding: 20px 25px;
-      cursor: pointer;
       transition: 0.3s; }
       .services .serv-content .card:hover {
         background: #5928d7;
@@ -289,7 +288,8 @@ main {
   .skills-content .left .text {
     font-size: 1rem;
     font-weight: 500;
-    text-align: justify; }
+    text-align: justify;
+    color: black; }
   .skills-content .left a {
     text-decoration: none;
     display: inline-block;
@@ -350,7 +350,13 @@ main {
     letter-spacing: 0.5px;
     padding: 0.13rem 0.75rem;
     margin-bottom: 1rem;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-top: 10px; }
+  .contact-info .contact__text {
+    color: #fff;
+    margin-left: 0;
+    font-size: 1rem;
+    margin: 0 15px; }
   .contact-info .mail {
     color: #6d33ff;
     font-weight: 500;
@@ -372,7 +378,8 @@ main {
   padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
-  margin: 15px; }
+  margin: 15px;
+  box-shadow: 0.25rem 0.5rem 0.25rem #6d33ff; }
   .contact-form h3 {
     color: #2d1863;
     font-size: 1.3rem;

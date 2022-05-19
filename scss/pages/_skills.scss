@@ -23,6 +23,7 @@
             font-size: 1rem;
             font-weight: 500;
             text-align: justify;
+            color: black;
         }
 
         a {
@@ -37,7 +38,6 @@
             margin-left: 20px;
             text-align: center;
             padding: 8px 16px;
-
             border-radius: 6px;
             border: solid 2px $main-color-1;
             transition: all 0.3s ease;
@@ -57,6 +57,7 @@
 
         .bars {
             margin-bottom: 15px;
+            
         }
 
         span {
@@ -64,7 +65,7 @@
             font-size: 18px;
         }
     }
-
+    
     .progress-bar {
         background-color: $main-color-1;
     }
